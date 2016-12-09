@@ -1,0 +1,25 @@
+body {
+  background-color: #000;
+  color: #FFF;
+
+}
+.keys {
+  margin: 0 auto;
+  display: block;
+
+}
+.key {
+  transition: all 0.07s;
+  padding: 10px;
+  border: 2px solid #FFFF00;
+  display: inline-block;
+  margin: 10px;
+  width: 100px;
+}
+kbd {
+  display: block;
+}
+
+.playing {
+  transform: scale(1.1);
+}
