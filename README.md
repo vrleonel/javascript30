@@ -1,8 +1,11 @@
 # javascript30
 javascript30 course scripts
 
-## Day1
+## Day 1
 Drum Kit
 
-## DA2
-02 - JS + CSS Clock
+## Day 2
+JS + CSS Clock
+
+##Day 3
+Playing with CSS Variables and JS
