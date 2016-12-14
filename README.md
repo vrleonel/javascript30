@@ -14,3 +14,9 @@ Playing with CSS Variables and JS
 http://vrleonel.com.br/demo/javascript30/day03/index.html
 
 ## Day 4
+Array Cardio Day 1
+http://vrleonel.com.br/demo/javascript30/day04/index.html
+
+## Day 5
+Flex panels image Gallery
+http://vrleonel.com.br/demo/javascript30/day04/index.html
