@@ -28,3 +28,7 @@ http://vrleonel.com.br/demo/javascript30/day06/index.html
 ## Day 7
 Array Cardio 2
 http://vrleonel.com.br/demo/javascript30/day07/index.html
+
+## Day 8
+Fun with HTML5 Canvas (With improvement to Touch)
+http://vrleonel.com.br/demo/javascript30/day08/index.html

@@ -7,6 +7,75 @@
 <body>
 <canvas id="draw" width="800" height="800"></canvas>
 <script>
+const canvas = document.querySelector("#draw");
+const ctx = canvas.getContext("2d");
+canvas.width = (window.innerWidth - 20);
+canvas.height = (window.innerHeight - 20);
+
+ctx.strokeStyle = "#BADA55";
+ctx.lineJoint = "round";
+ctx.lineCap = "round";
+ctx.lineWidth  = 100;
+
+// Types of Operations: https://developer.mozilla.org/pt-BR/docs/Web/API/CanvasRenderingContext2D/globalCompositeOperation
+// ctx.globalCompositeOperation = "multiply";
+ctx.globalCompositeOperation = "overlay";
+
+let isDrawing = false;
+let lastX = 0;
+let lastY = 0;
+let hue = 0;
+let direction = true;
+
+function draw(e) {
+  console.log(getPosition(e)[0]);
+  if(!isDrawing) return; // Stope the fn from runing when they are not moused down
+
+  ctx.strokeStyle = `hsl(${hue}, 100%, 50%)`
+  ctx.beginPath();
+
+  //start from
+  ctx.moveTo(lastX, lastY);
+
+  //Go to
+  let newPosition = getPosition(e);
+  ctx.lineTo(newPosition[0], newPosition[1]);
+  ctx.stroke();
+  [lastX, lastY] = newPosition;
+  hue++;
+
+  if (ctx.lineWidth >= 100 || ctx.lineWidth <= 1) direction = !direction;
+
+  direction ? ctx.lineWidth++ : ctx.lineWidth--
+
+}
+
+function getPosition(e) {
+  if(e.type === "touchmove"){
+    return [e.changedTouches[0].pageX, e.changedTouches[0].pageY];
+  } else {
+    return [e.offsetX,  e.offsetY];
+  }
+}
+
+canvas.addEventListener("mousedown", (e) => {
+  isDrawing = true;
+  [lastX, lastY] = [e.offsetX, e.offsetY];
+});
+canvas.addEventListener("mousemove", draw);
+canvas.addEventListener("mouseup", () => isDrawing = false);
+canvas.addEventListener("mouseout", () => isDrawing = false);
+
+ // Touch Events
+ canvas.addEventListener("touchstart", (e) => {
+   isDrawing = true;
+   [lastX, lastY] = [e.offsetX, e.offsetY];
+ });
+ canvas.addEventListener("touchmove", draw);
+
+ canvas.addEventListener("touchend", () => isDrawing = false);
+ canvas.addEventListener("touchcancel", () => isDrawing = false);
+ canvas.addEventListener("touchleave", () => isDrawing = false);
 </script>
 
 <style>
