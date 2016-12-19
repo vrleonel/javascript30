@@ -28,7 +28,6 @@ let hue = 0;
 let direction = true;
 
 function draw(e) {
-  console.log(getPosition(e)[0]);
   if(!isDrawing) return; // Stope the fn from runing when they are not moused down
 
   ctx.strokeStyle = `hsl(${hue}, 100%, 50%)`
