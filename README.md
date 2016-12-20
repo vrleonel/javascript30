@@ -32,3 +32,7 @@ http://vrleonel.com.br/demo/javascript30/day07/index.html
 ## Day 8
 Fun with HTML5 Canvas (With improvement to Touch)
 http://vrleonel.com.br/demo/javascript30/day08/index.html
+
+## Day 9
+14 Must Know Dev Tools Tricks
+http://vrleonel.com.br/demo/javascript30/day09/index.html
