@@ -117,8 +117,11 @@ function handleCheck(e){
     // loop over every single checkbox
     checkboxes.forEach(checkbox => {
       if(checkbox === this || checkbox === lastChecked){
-        console.log(checkbox);
         inBetween = !inBetween;
+      }
+
+      if(inBetween) {
+        checkbox.checked = true;
       }
     })
 
