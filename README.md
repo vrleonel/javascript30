@@ -1,6 +1,9 @@
 # javascript30
 javascript30 course scripts
 
+## Deploy
+`$ git push web` 
+
 ## Day 1
 Drum Kit
 http://vrleonel.com.br/demo/javascript30/day01/index.html
@@ -36,3 +39,7 @@ http://vrleonel.com.br/demo/javascript30/day08/index.html
 ## Day 9
 14 Must Know Dev Tools Tricks
 http://vrleonel.com.br/demo/javascript30/day09/index.html
+
+## Day 10
+Hold Shift and Check Checkboxes
+http://vrleonel.com.br/demo/javascript30/day10/index.html
